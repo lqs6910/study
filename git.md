@@ -31,21 +31,20 @@ $ git config --list
 > git diff
 
 若要查看已暂存的将要添加到下次提交里的内容
-> git diff --cached \
+> git diff --cached 
+
 或者
 > git diff --staged
 
 ## 查看提交历史
-> git log \
+> git log 
+
 一个常用的选项是 -p，用来显示每次提交的内容差异。 你也可以加上 -2 来仅显示最近两次提交：
-> git log -p -2 \
-另外一个常用的选项是 --pretty。 这个选项可以指定使用不同于默认格式的方式展示提交历史。
+> git log -p -2 
+
+另外一个常用的选项是 --pretty。 这个选项可以指定使用不同于默认格式的方式展示提交历史
+
 > git log --pretty=oneline
-
-
--------------------------------------------
-
-# 远程仓库的使用
 
 ## 远程仓库克隆
 > git clone https://github.com/schacon/ticgit
