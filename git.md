@@ -1,4 +1,4 @@
-# 运行 Git 前的配置
+# 一、运行 Git 前的配置
 
 ## Git 自带一个 git config 的工具来帮助设置控制 Git 外观和行为的配置变量。 这些变量存储在三个不同的位置：
 1. /etc/gitconfig 文件: 包含系统上每一个用户及他们仓库的通用配置。 如果使用带有 --system 选项的 git config 时，它会从此文件读写配置变量。
@@ -14,6 +14,36 @@
 
 ## 检查配置信息
 $ git config --list
+
+------------------------------------------
+
+# 二、git基础
+## 现有目录中初始化仓库
+> git init \
+> $ git add *.c \
+> $ git add LICENSE \
+> $ git commit -m 'initial project version'
+
+## 检查当前文件状态
+> $ git status
+
+要查看尚未暂存的文件更新了哪些部分
+> git diff
+
+若要查看已暂存的将要添加到下次提交里的内容
+> git diff --cached \
+或者
+> git diff --staged
+
+## 查看提交历史
+> git log \
+一个常用的选项是 -p，用来显示每次提交的内容差异。 你也可以加上 -2 来仅显示最近两次提交：
+> git log -p -2 \
+另外一个常用的选项是 --pretty。 这个选项可以指定使用不同于默认格式的方式展示提交历史。
+> git log --pretty=oneline
+
+
+-------------------------------------------
 
 # 远程仓库的使用
 
